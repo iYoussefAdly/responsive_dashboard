@@ -1,4 +1,4 @@
-abstract class AssetData {
+abstract class AssetsData {
   static const String imagesAvatar1 = 'assets/images/avatar1.jpg';
   static const String imagesAvatar2 = 'assets/images/avatar2.jpg';
   static const String imagesBalance = 'assets/images/balance.jpg';
@@ -13,4 +13,5 @@ abstract class AssetData {
   static const String imagesStatistics = 'assets/images/statistics.png';
   static const String imagesTransaction = 'assets/images/transaction.png';
   static const String imagesWalletAccount = 'assets/images/wallet_account.png';
+  static const String imagesAvatar3 = 'assets/images/avatar3.png';
 }
