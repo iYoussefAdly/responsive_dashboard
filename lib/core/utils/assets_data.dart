@@ -1,7 +1,7 @@
 abstract class AssetsData {
   static const String imagesAvatar1 = 'assets/images/avatar1.jpg';
   static const String imagesAvatar2 = 'assets/images/avatar2.jpg';
-  static const String imagesBalance = 'assets/images/balance.jpg';
+  static const String imagesBalance = 'assets/images/moneys.svg';
   static const String imagesDashboard = 'assets/images/dashboard.png';
   static const String imagesExpneses = 'assets/images/expneses.png';
   static const String imagesGallery = 'assets/images/gallery.png';
@@ -14,4 +14,5 @@ abstract class AssetsData {
   static const String imagesTransaction = 'assets/images/transaction.png';
   static const String imagesWalletAccount = 'assets/images/wallet_account.png';
   static const String imagesAvatar3 = 'assets/images/avatar3.png';
+  
 }
