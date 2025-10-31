@@ -1,17 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/core/utils/assets_data.dart';
 import 'package:responsive_dashboard/models/drawer_item_model.dart';
+import 'package:responsive_dashboard/models/latest_transaction_item_model.dart';
 import 'package:responsive_dashboard/views/widgets/drawer_item_view.dart';
 import 'package:responsive_dashboard/views/widgets/in_active_drawer_item.dart';
 import 'package:responsive_dashboard/views/widgets/user_info_list_tile.dart';
+
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
   static final List<DrawerItemModel> items = [
     DrawerItemModel(image: AssetsData.imagesDashboard, name: 'Dashboard'),
-    DrawerItemModel(image: AssetsData.imagesTransaction, name: "My Transaction"),
+    DrawerItemModel(
+      image: AssetsData.imagesTransaction,
+      name: "My Transaction",
+    ),
     DrawerItemModel(image: AssetsData.imagesStatistics, name: "Statistics"),
-    DrawerItemModel(image: AssetsData.imagesWalletAccount, name: "Wallet Account"),
-    DrawerItemModel(image: AssetsData.imagesInvestments, name: "My Investments"),
+    DrawerItemModel(
+      image: AssetsData.imagesWalletAccount,
+      name: "Wallet Account",
+    ),
+    DrawerItemModel(
+      image: AssetsData.imagesInvestments,
+      name: "My Investments",
+    ),
   ];
   @override
   Widget build(BuildContext context) {
@@ -21,9 +32,11 @@ class CustomDrawer extends StatelessWidget {
         slivers: [
           SliverToBoxAdapter(
             child: UserInfoListTile(
-              title: 'Lekan Okeowo',
-              subtitle: 'demo@gmail.com',
-              image: AssetsData.imagesAvatar1,
+              latestTransactionItemModel: LatestTransactionItemModel(
+                title: 'Lekan Okeowo',
+                email: 'demo@gmail.com',
+                image: AssetsData.imagesAvatar1,
+              ),
             ),
           ),
           SliverToBoxAdapter(child: SizedBox(height: 8)),
@@ -32,15 +45,23 @@ class CustomDrawer extends StatelessWidget {
             hasScrollBody: false,
             child: Column(
               children: [
-                Expanded(child: SizedBox(
-                  height: 20,
-                )),
-                InActiveDrawerItem(drawerItemModel: DrawerItemModel(image: AssetsData.imagesSetting2, name: "Setting system"),),
-                InActiveDrawerItem(drawerItemModel: DrawerItemModel(image: AssetsData.imagesLogout, name: "Logout")),
-                SizedBox(height: 48,),
+                Expanded(child: SizedBox(height: 20)),
+                InActiveDrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                    image: AssetsData.imagesSetting2,
+                    name: "Setting system",
+                  ),
+                ),
+                InActiveDrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                    image: AssetsData.imagesLogout,
+                    name: "Logout",
+                  ),
+                ),
+                SizedBox(height: 48),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
