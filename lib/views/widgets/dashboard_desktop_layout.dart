@@ -14,18 +14,20 @@ class DashboardDesktopLayout extends StatelessWidget {
         SizedBox(width: 32),
         Expanded(
           flex: 2,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 40, bottom: 24),
-                child: CustomBackgroundContainer(child: AllExpenses()),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 32),
-                child: CustomBackgroundContainer(child: (QuickInvoice())),
-              ),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 40, bottom: 24),
+                  child: CustomBackgroundContainer(child: AllExpenses()),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 32),
+                  child: CustomBackgroundContainer(child: (QuickInvoice())),
+                ),
+              ],
+            ),
           ),
         ),
       ],
