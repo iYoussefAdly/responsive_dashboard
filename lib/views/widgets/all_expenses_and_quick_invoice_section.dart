@@ -15,7 +15,7 @@ class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 40, bottom: 24),
+            padding: const EdgeInsets.only(bottom: 24),
             child: CustomBackgroundContainer(child: AllExpenses()),
           ),
           Padding(
