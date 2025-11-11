@@ -10,7 +10,7 @@ class AllExpensesHeader extends StatelessWidget {
       padding: const EdgeInsets.all(12),
       child: Row(
         children: [
-          Text("All Expenses", style: AppStyles.styleSemiBold20),
+          Text("All Expenses", style: AppStyles.styleSemiBold20(context)),
           Expanded(child: SizedBox()),
           RangeOptions(),
         ],

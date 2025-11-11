@@ -5,8 +5,8 @@ import 'package:responsive_dashboard/views/widgets/custom_back_ground_container.
 import 'package:responsive_dashboard/views/widgets/income_header_section.dart';
 import 'package:responsive_dashboard/views/widgets/my_card_section.dart';
 import 'package:responsive_dashboard/views/widgets/transaction_history_section.dart';
-class MyCardAndTransactionHistoryAndIncomeSection extends StatelessWidget {
-  const MyCardAndTransactionHistoryAndIncomeSection();
+class MyCardAndTransactionHistoryAndIncomeDesktopSection extends StatelessWidget {
+  const MyCardAndTransactionHistoryAndIncomeDesktopSection();
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -46,6 +46,9 @@ class MyCardAndTransactionHistoryAndIncomeSection extends StatelessWidget {
                     height: 16,
                   ),
                   ChartSection(),
+                  SizedBox(
+                    height: 40,
+                  )
                 ],
               ),
             ),

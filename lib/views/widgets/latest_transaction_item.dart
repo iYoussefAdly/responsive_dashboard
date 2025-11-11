@@ -20,9 +20,9 @@ class LatestTransactionItem extends StatelessWidget {
           SizedBox(width: 12,),
           Column(
             children: [
-              Text(latestTransactionItemModel.title,style: AppStyles.styleSemiBold16,),
+              Text(latestTransactionItemModel.title,style: AppStyles.styleSemiBold16(context),),
               SizedBox(height: 6,),
-              Text(latestTransactionItemModel.email,style: AppStyles.styleRegular12,),
+              Text(latestTransactionItemModel.email,style: AppStyles.styleRegular12(context),),
             ],
           )
           ]),

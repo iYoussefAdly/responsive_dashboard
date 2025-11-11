@@ -12,7 +12,7 @@ class CustomButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         color: Color(0xff4BB1E9)
       ),
-      child: Center(child: Text("Send Money",style: AppStyles.styleSemiBold18,)),
+      child: Center(child: Text("Send Money",style: AppStyles.styleSemiBold18(context),)),
     );
   }
 }

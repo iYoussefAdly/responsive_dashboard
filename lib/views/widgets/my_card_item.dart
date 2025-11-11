@@ -27,9 +27,9 @@ class MyCardItem extends StatelessWidget {
                 contentPadding: EdgeInsets.zero,
                 title: Text(
                   "Name card",
-                  style: AppStyles.styleRegular16.copyWith(color: Colors.white),
+                  style: AppStyles.styleRegular16(context).copyWith(color: Colors.white),
                 ),
-                subtitle: Text("Syah Bandi", style: AppStyles.styleMediium20),
+                subtitle: Text("Syah Bandi", style: AppStyles.styleMedium20(context)),
                 trailing: Image.asset(AssetsData.imagesGallery),
               ),
             ),
@@ -41,11 +41,11 @@ class MyCardItem extends StatelessWidget {
                 children: [
                   Text(
                     "0918 8124 0042",
-                    style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),
+                    style: AppStyles.styleSemiBold24(context).copyWith(color: Colors.white),
                   ),
                   Text(
                     "12/20 - 124",
-                    style: AppStyles.styleRegular16.copyWith(color: Colors.white),
+                    style: AppStyles.styleRegular16(context).copyWith(color: Colors.white),
                   ),
                 ],
               ),

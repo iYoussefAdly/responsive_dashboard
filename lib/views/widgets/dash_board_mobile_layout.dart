@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/views/widgets/all_expenses_and_quick_invoice_section.dart';
+import 'package:responsive_dashboard/views/widgets/all_expenses_and_quick_invoice_mobile_and_tablet_section.dart';
 import 'package:responsive_dashboard/views/widgets/chart_section.dart';
 import 'package:responsive_dashboard/views/widgets/custom_back_ground_container.dart';
 import 'package:responsive_dashboard/views/widgets/income_header_section.dart';
@@ -14,7 +14,7 @@ class DashBoardMobileLayout extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          AllExpensesAndQuickInvoiceSection(),
+          AllExpensesAndQuickInvoiceMobileAndTabletSection(),
           CustomBackgroundContainer(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),

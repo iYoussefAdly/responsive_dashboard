@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/models/details_item_model.dart';
 import 'package:responsive_dashboard/views/widgets/chart_details_item.dart';
@@ -24,6 +26,7 @@ class ChartDetails extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
+    log(MediaQuery.of(context).size.width.toString());
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: List.generate(items.length, (index) {

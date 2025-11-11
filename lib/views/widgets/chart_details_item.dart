@@ -22,7 +22,7 @@ class ChartDetailsItem extends StatelessWidget {
         Expanded(
           child: Text(
             detailsItemModel.title,
-            style: AppStyles.styleRegular16,
+            style: AppStyles.styleRegular16(context),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
@@ -30,7 +30,7 @@ class ChartDetailsItem extends StatelessWidget {
         SizedBox(width: 12),
         Text(
           detailsItemModel.value,
-          style: AppStyles.styleMediium16.copyWith(color: Color(0xff1F88C2)),
+          style: AppStyles.styleMedium16(context).copyWith(color: Color(0xff1F88C2)),
         ),
       ],
     );
