@@ -12,10 +12,15 @@ class UserInfoListTile extends StatelessWidget {
       color: Color(0xffF8F8F8),
       child: ListTile(
         leading: Image.asset(latestTransactionItemModel.image),
-        title: Text(latestTransactionItemModel.title, style: AppStyles.styleSemiBold16(context)),
-        subtitle: Text(
-          latestTransactionItemModel.email,
-          style: AppStyles.styleMedium20(context).copyWith(color: Color(0xffA5A5A5)),
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(latestTransactionItemModel.title, style: AppStyles.styleSemiBold16(context))),
+        subtitle: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            latestTransactionItemModel.email,
+            style: AppStyles.styleMedium20(context).copyWith(color: Color(0xffA5A5A5)),
+          ),
         ),
       ),
     );

@@ -14,7 +14,10 @@ class InActiveDrawerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: Image.asset(drawerItemModel.image),
-      title: Text(drawerItemModel.name, style: AppStyles.styleRegular16(context)),
+      title: FittedBox(
+        alignment: AlignmentDirectional.centerStart,
+        fit: BoxFit.scaleDown,
+        child: Text(drawerItemModel.name, style: AppStyles.styleRegular16(context))),
     );
   }
 }
