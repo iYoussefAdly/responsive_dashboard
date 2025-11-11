@@ -34,40 +34,53 @@ class _AllExpensesItemsViewState extends State<AllExpensesItemsView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: items.asMap().entries.map((e) {
-        int index = e.key;
-        var item = e.value;
-        return index == 1
-            ? Expanded(
-                child: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                    selectedIndex = index;  
-                    });
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    child: AllExpensesItem(
-                      allExpensesItemModel: item,
-                      isSelected: selectedIndex == index,
-                    ),
-                  ),
-                ),
-              )
-            : Expanded(
-                child: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                    selectedIndex = index;  
-                    });
-                  },
-                  child: AllExpensesItem(
-                    allExpensesItemModel: item,
-                    isSelected: selectedIndex == index,
-                  ),
-                ),
-              );
-      }).toList(),
-    );
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedIndex = 0;
+              });
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: items[0],
+              isSelected: selectedIndex == 0,
+            ),
+          ),
+        ),
+        SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedIndex = 1;
+              });
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: items[1],
+              isSelected: selectedIndex == 1,
+            ),
+          ),
+        ),
+        SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedIndex = 2;
+              });
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: items[2],
+              isSelected: selectedIndex == 2,
+            ),
+          ),
+          )
+        ],
+      );
+    }
   }
-}
